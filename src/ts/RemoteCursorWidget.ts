@@ -121,6 +121,10 @@ export class RemoteCursorWidget {
 
     this._contentManager.dispose();
 
+    if (this._domNode.parentNode) {
+      this._domNode.parentNode.removeChild(this._domNode);
+    }
+
     this._disposed = true;
     this._onDisposed();
   }

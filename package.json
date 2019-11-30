@@ -1,0 +1,70 @@
+{
+  "name": "@convergencelabs/codemirror-collab-ext",
+  "version": "0.1.0",
+  "title": "CodeMirror Collaborative Extensions",
+  "description": "Collaborative Extensions for the CodeMirror Editor",
+  "keywords": [
+    "collaboration",
+    "CodeMirror",
+    "editor"
+  ],
+  "homepage": "http://convergencelabs.com",
+  "author": {
+    "name": "Convergence Labs",
+    "email": "info@convergencelabs.com",
+    "url": "http://convergencelabs.com"
+  },
+  "contributors": [],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/convergencelabs/codemirror-collab-ext.git"
+  },
+  "bugs": {
+    "url": "https://github.com/convergencelabs/codemirror-collab-ext/issues"
+  },
+  "license": "MIT",
+  "main": "lib/index.js",
+  "typings": "typings/index.d.ts",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
+  "dependencies": {
+    "@types/codemirror": "0.0.81",
+    "codemirror": "5.49.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "7.7.4",
+    "@babel/core": "7.7.4",
+    "@babel/node": "7.7.4",
+    "@babel/preset-env": "7.7.4",
+    "@babel/preset-stage-3": "7.0.0",
+    "@babel/preset-typescript": "7.7.4",
+    "@babel/register": "7.7.4",
+    "@ctrl/tinycolor": "2.5.4",
+    "babel-plugin-module-resolver": "3.2.0",
+    "babel-plugin-transform-class-properties": "6.24.1",
+    "del": "3.0.0",
+    "gulp": "4.0.0",
+    "gulp-babel": "8.0.0",
+    "gulp-bump": "3.1.1",
+    "gulp-clean-css": "4.2.0",
+    "gulp-filter-each": "1.0.1",
+    "gulp-header": "2.0.9",
+    "gulp-insert": "0.5.0",
+    "gulp-rename": "1.4.0",
+    "gulp-sourcemaps": "2.6.5",
+    "gulp-typescript": "5.0.0",
+    "gulp-uglify": "3.0.2",
+    "trim": "0.0.1",
+    "ts-loader": "6.2.1",
+    "tslint": "5.20.1",
+    "typescript": "3.7.2",
+    "webpack": "4.41.2",
+    "webpack-stream": "5.2.1"
+  },
+  "scripts": {
+    "dist": "gulp dist",
+    "clean": "gulp clean"
+  }
+}

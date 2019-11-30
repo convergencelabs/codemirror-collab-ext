@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> CodeMirror Editor Collaborative Extensions Demo</title>
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+
+  <link rel="stylesheet" href="../node_modules/codemirror/lib/codemirror.css"/>
+  <link rel="stylesheet" href="../dist/css/codemirror-collab-ext.css">
+  <link rel="stylesheet" href="./example.css">
+
+  <script src="../node_modules/codemirror/lib/codemirror.js"></script>
+  <script src="../node_modules/codemirror/mode/javascript/javascript.js"></script>
+</head>
+<body>
+<h1>CodeMirror Editor Collaborative Extensions Demo</h1>
+<div class="editors">
+  <div class="editor-column">
+    <h2>Source Editor</h2>
+    <div class="description">Type and make selections here.</div>
+    <div class="editor" id="source-editor"></div>
+  </div>
+  <div class="editor-column">
+    <h2>Target Editor</h2>
+    <div class="description">See changes, remote cursors, and selections here.</div>
+    <div class="editor" id="target-editor"></div>
+  </div>
+</div>
+
+<script src="../dist/umd/codemirror-collab-ext.js"></script>
+<script src="./editor_contents.js"></script>
+<script src="./example.js"></script>
+
+</body>
+</html>

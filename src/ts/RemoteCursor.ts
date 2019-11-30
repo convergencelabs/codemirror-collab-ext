@@ -57,13 +57,13 @@ export class RemoteCursor {
   }
 
   /**
-   * Sets the location of the cursor using a zero-based text offset.
+   * Sets the location of the cursor using a zero-based text index.
    *
-   * @param offset
-   *   The offset of the cursor.
+   * @param index
+   *   The index of the cursor.
    */
-  public setOffset(offset: number): void {
-    this._delegate.setIndex(offset);
+  public setIndex(index: number): void {
+    this._delegate.setIndex(index);
   }
 
   /**

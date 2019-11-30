@@ -162,9 +162,9 @@ export class RemoteSelection {
    * Sets the selection using zero-based text indices.
    *
    * @param start
-   *   The start offset to set the selection to.
+   *   The start index to set the selection to.
    * @param end
-   *   The end offset to set the selection to.
+   *   The end index to set the selection to.
    */
   public setIndices(start: number, end: number): void {
     const startPosition = this._editor.posFromIndex(start);

@@ -172,8 +172,8 @@ export class RemoteCursorWidget {
   private _onInsert = (index: number, text: string) => {
     const currentIndex = this._index;
     if (index <= currentIndex) {
-      const newOffset = currentIndex + text.length;
-      const position = this._editor.posFromIndex(newOffset);
+      const newIndex = currentIndex + text.length;
+      const position = this._editor.posFromIndex(newIndex);
       this._updatePosition(position);
     }
   }
@@ -181,8 +181,8 @@ export class RemoteCursorWidget {
   private _onReplace = (index: number, length: number, text: string) => {
     const currentIndex = this._index;
     if (index <= currentIndex) {
-      const newOffset = (currentIndex - Math.min(currentIndex - index, length)) + text.length;
-      const position = this._editor.posFromIndex(newOffset);
+      const newIndex = (currentIndex - Math.min(currentIndex - index, length)) + text.length;
+      const position = this._editor.posFromIndex(newIndex);
       this._updatePosition(position);
     }
   }
@@ -190,8 +190,8 @@ export class RemoteCursorWidget {
   private _onDelete = (index: number, length: number) => {
     const currentIndex = this._index;
     if (index <= currentIndex) {
-      const newOffset = currentIndex - Math.min(currentIndex - index, length);
-      const position = this._editor.posFromIndex(newOffset);
+      const newIndex = currentIndex - Math.min(currentIndex - index, length);
+      const position = this._editor.posFromIndex(newIndex);
       this._updatePosition(position);
     }
   }

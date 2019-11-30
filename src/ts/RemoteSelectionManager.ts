@@ -75,18 +75,18 @@ export class RemoteSelectionManager {
   }
 
   /**
-   * Sets the selection using zero-based text offset locations.
+   * Sets the selection using zero-based text indices.
    *
    * @param id
    *   The unique id of the selection.
    * @param start
-   *   The starting offset of the selection.
+   *   The starting index of the selection.
    * @param end
-   *   The ending offset of the selection.
+   *   The ending index of the selection.
    */
-  public setSelectionOffsets(id: string, start: number, end: number): void {
+  public setSelectionIndices(id: string, start: number, end: number): void {
     const remoteSelection = this._getSelection(id);
-    remoteSelection.setOffsets(start, end);
+    remoteSelection.setIndices(start, end);
   }
 
   /**

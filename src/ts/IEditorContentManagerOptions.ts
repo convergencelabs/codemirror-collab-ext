@@ -14,7 +14,7 @@ export interface IEditorContentManagerOptions {
    * Handles cases where text was inserted into the editor.
    *
    * @param index
-   *   The zero-based offset where the text insert occurred.
+   *   The zero-based index where the text insert occurred.
    * @param text
    *   the text that was inserted.
    */
@@ -24,7 +24,7 @@ export interface IEditorContentManagerOptions {
    * Handles cases where text was replaced in the editor.
    *
    * @param index
-   *   The zero-based offset at the beginning of the replaced range.
+   *   The zero-based index at the beginning of the replaced range.
    * @param length
    *   The length of the range that was replaced.
    * @param text
@@ -36,7 +36,7 @@ export interface IEditorContentManagerOptions {
    * Handles cases where text was deleted from the editor.
    *
    * @param index
-   *   The zero-based offset at the beginning of the removed range.
+   *   The zero-based index at the beginning of the removed range.
    * @param length
    *   The length of the range that was removed.
    */

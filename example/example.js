@@ -33,7 +33,7 @@ const sourceUserCursor = remoteCursorManager.addCursor(sourceUser.id, sourceUser
 sourceUserCursor.hide();
 const staticUserCursor = remoteCursorManager.addCursor(staticUser.id, staticUser.color, staticUser.label);
 
-staticUserCursor.setOffset(50);
+staticUserCursor.setIndex(50);
 
 const remoteSelectionManager = new CodeMirrorCollabExt.RemoteSelectionManager({editor: targetEditor});
 const sourceUserSelection = remoteSelectionManager.addSelection(sourceUser.id, sourceUser.color);

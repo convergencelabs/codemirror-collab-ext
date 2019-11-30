@@ -56,6 +56,7 @@ export class RemoteCursorWidget {
       this._tooltipNode = document.createElement("div");
       this._tooltipNode.className = "codemirror-remote-cursor-tooltip";
       this._tooltipNode.style.background = color;
+      this._tooltipNode.style.opacity = "0";
       this._tooltipNode.innerHTML = label;
       this._domNode.appendChild(this._tooltipNode);
 
@@ -74,13 +75,12 @@ export class RemoteCursorWidget {
       id: "remote-cursor-" + widgetId
     });
 
-    this._index = 0;
-    this._position = {line: 0, ch: 0};
-
     this._hideTimer = null;
     this._onDisposed = onDisposed;
 
     this._disposed = false;
+
+    this._updatePosition({line: 0, ch: 0});
   }
 
   public hide(): void {
@@ -141,7 +141,6 @@ export class RemoteCursorWidget {
     this._domNode.style.top = cursorCoords.top + "px";
     this._index = this._editor.indexFromPos(position);
     this._position = position;
-    console.log(this._index, this._position);
   }
 
   private _showTooltip(): void {
@@ -168,7 +167,7 @@ export class RemoteCursorWidget {
     }
 
     this._tooltipNode.style.left = "0";
-  }
+  };
 
   private _setTooltipVisible(visible: boolean): void {
     if (visible) {
@@ -185,7 +184,7 @@ export class RemoteCursorWidget {
       const position = this._editor.posFromIndex(newIndex);
       this._updatePosition(position);
     }
-  }
+  };
 
   private _onReplace = (index: number, length: number, text: string) => {
     const currentIndex = this._index;
@@ -194,7 +193,7 @@ export class RemoteCursorWidget {
       const position = this._editor.posFromIndex(newIndex);
       this._updatePosition(position);
     }
-  }
+  };
 
   private _onDelete = (index: number, length: number) => {
     const currentIndex = this._index;
@@ -203,5 +202,5 @@ export class RemoteCursorWidget {
       const position = this._editor.posFromIndex(newIndex);
       this._updatePosition(position);
     }
-  }
+  };
 }

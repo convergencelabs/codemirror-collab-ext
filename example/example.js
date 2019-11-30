@@ -30,7 +30,6 @@ const remoteCursorManager = new CodeMirrorCollabExt.RemoteCursorManager({
   tooltipDuration: 2
 });
 const sourceUserCursor = remoteCursorManager.addCursor(sourceUser.id, sourceUser.color, sourceUser.label);
-sourceUserCursor.hide();
 const staticUserCursor = remoteCursorManager.addCursor(staticUser.id, staticUser.color, staticUser.label);
 
 staticUserCursor.setIndex(50);
@@ -43,7 +42,6 @@ remoteSelectionManager.addSelection(staticUser.id, staticUser.color);
 sourceEditor.on("cursorActivity", () => {
   setTimeout(() => {
     sourceUserCursor.setPosition(sourceEditor.getCursor());
-    sourceUserCursor.show();
 
     sourceUserSelection.setPositions(
       sourceEditor.getCursor("from"),

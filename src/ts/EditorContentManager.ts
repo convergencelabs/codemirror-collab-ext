@@ -188,7 +188,6 @@ export class EditorContentManager {
     }
 
     changes.forEach((changeObj: EditorChangeLinkedList) => {
-      console.log(`change(${this._options.id})`, changeObj);
       const {from, to, inserted, deleted} = this._operationQueue.shift();
 
       if (inserted !== null && deleted === null) {

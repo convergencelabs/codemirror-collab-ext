@@ -30,6 +30,7 @@
     "access": "public"
   },
   "dependencies": {
+    "@ctrl/tinycolor": "2.5.4",
     "@types/codemirror": "0.0.81",
     "codemirror": "5.49.2"
   },
@@ -41,7 +42,6 @@
     "@babel/preset-stage-3": "7.0.0",
     "@babel/preset-typescript": "7.7.4",
     "@babel/register": "7.7.4",
-    "@ctrl/tinycolor": "2.5.4",
     "babel-plugin-module-resolver": "3.2.0",
     "babel-plugin-transform-class-properties": "6.24.1",
     "del": "3.0.0",

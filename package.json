@@ -32,7 +32,7 @@
   "dependencies": {
     "@ctrl/tinycolor": "2.5.4",
     "@types/codemirror": "0.0.81",
-    "codemirror": "5.49.2"
+    "codemirror": "5.58.2"
   },
   "devDependencies": {
     "@babel/cli": "7.7.4",
